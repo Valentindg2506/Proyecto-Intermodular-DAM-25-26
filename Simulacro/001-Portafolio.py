@@ -79,10 +79,10 @@ while True:
 		print("1.-Listar categoria")
 		print("2.-Listar pieza")
 		print("3.-Ambas")
-		opcion = int(input("Escoge una opcion: "))
+		subopcion = int(input("Escoge una opcion: "))
 		
 		
-		if opcion == 1:
+		if subopcion == 1:
 			consulta = "SELECT * FROM categoria;"
 			cursor.execute(consulta)
 			resultados = cursor.fetchall()
@@ -94,7 +94,7 @@ while True:
 				print("-" * 30)  # línea separadora entre registros
 		
 		
-		elif opcion == 2:
+		elif subopcion == 2:
 			consulta = "SELECT * FROM pieza;"
 			cursor.execute(consulta)
 			resultados = cursor.fetchall()
@@ -108,7 +108,7 @@ while True:
 				print("Id categoria: ",fila[5])
 				print("-" * 30)  # línea separadora entre registros
 				
-		elif opcion == 3:		
+		elif subopcion == 3:		
 			consulta = "SELECT * FROM vista_portafolio;"
 			cursor.execute(consulta)
 			resultados = cursor.fetchall()
@@ -126,9 +126,9 @@ while True:
 	elif opcion == 3:
 		print("1.-Modificar una categoria")
 		print("2.-Modificar una pieza")
-		opcion = int(input("Escoge una opcion: "))
+		subopcion = int(input("Escoge una opcion: "))
 		
-		if opcion == 1:
+		if subopcion == 1:
 			identificador = input("Introduce el Identificador a actualizar: ")
 			titulo = input("Introduce el titulo de la nueva categoria: ")
 			descripcion = input("Introduce la descripcion de la nueva categoria: ")
@@ -138,38 +138,36 @@ while True:
 			  titulo = "'''+titulo+'''",
 			  descripcion = "'''+descripcion+'''",
 			  WHERE Identificador = '''+identificador+'''
-		''')
-	conexion.commit()
+				''')
+			conexion.commit()
 		
-		elif opcion == 2:
+		if subopcion == 2:
 			identificador = input("Introduce el Identificador a actualizar: ")
 			titulo = input("Introduce el titulo de la nueva pieza: ")
 			descripcion = input("Introduce la descripcion de la nueva pieza: ")
-			fecha = input("Introduce la fecha de la nueva pieza: ")
 			imagen = input("Introduce el nombre de la imagen de la nueva pieza: ")
 			cursor.execute('''
-			  UPDATE piezas 
+			  UPDATE piezas
 			  SET
 			  titulo = "'''+titulo+'''",
 			  descripcion = "'''+descripcion+'''",
-			  fecha = "'''+fecha+'''",
-			  imagen = "'''+imagen+'''"
+			  imagen = "'''+imagen+'''",
 			  WHERE Identificador = '''+identificador+'''
-		''')
-    conexion.commit()
+				''')
+			conexion.commit()
     
 	elif opcion == 4:
 		print("1.-Eliminar un elemento de categoria")
 		print("2.-Eliminar un elemento de pieza")
-		opcion = int(input("Escoge una opcion: "))
+		subopcion = int(input("Escoge una opcion: "))
 		
-		if opcion == 1:
+		if subopcion == 1:
 			identificador = input("Introduce el Identificador a eliminar: ")
 			cursor.execute("DELETE FROM categoria WHERE Identificador = "+identificador+";")
 			conexion.commit()
 		
 		
-		elif opcion == 2:
+		elif subopcion == 2:
 			identificador = input("Introduce el Identificador a eliminar: ")
 			cursor.execute("DELETE FROM piezas WHERE Identificador = "+identificador+";")
 			conexion.commit()
