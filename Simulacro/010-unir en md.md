@@ -2,6 +2,8 @@ En este ejercicio vamos a hacer unir la base de datos creada anteriormente con e
 
 ---
 
+Codigo detallado con docstrings:
+
 ```
 	from flask import Flask																	## IMPORTO LA LIBRERIA FLASK ##
 	import mysql.connector  																## IMPORTO EL CONECTOR A LA BASE DE DATOS ##
