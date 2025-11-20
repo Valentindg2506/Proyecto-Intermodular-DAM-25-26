@@ -1,7 +1,14 @@
 {
-	"datos personales":{
+	"datos_personales":{
 		"nombre":"Valentin",
 		"apellidos":"De Gennaro",
-		"correo":"info@valentin.com"
-	}
+		"correo":"info@valentin.com",
+		"telefonos":["6555245","4568763"]
+	},
+	"experiencias_laborales":[
+		"experiencia1",
+		"experiencia2"
+	]
+
+	
 }
