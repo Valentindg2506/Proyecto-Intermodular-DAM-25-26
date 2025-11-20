@@ -1,5 +1,7 @@
 {
-	"nombre":"Valentin",
-	"apellidos":"De Gennaro",
-	"correo":"info@valentin.com"
+	"datos personales":{
+		"nombre":"Valentin",
+		"apellidos":"De Gennaro",
+		"correo":"info@valentin.com"
+	}
 }
