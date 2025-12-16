@@ -55,8 +55,8 @@ graph TD
     API --> MobileApp
     Logic --> WebApp
     Logic --> MobileApp
-    
-    sequenceDiagram
+```
+```  sequenceDiagram
     participant Agente as 👤 Agente (App)
     participant Cloud as ☁️ Backend (API)
     participant IA as 🤖 IA (OCR/Text)
