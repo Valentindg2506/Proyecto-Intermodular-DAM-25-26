@@ -47,7 +47,6 @@ graph TD
             WebApp[WEB APP\n(Next.js)]
             MobileApp[MOBILE APP\n(React Native)]
         end
-    end
 
     Types --> WebApp
     Types --> MobileApp
@@ -55,7 +54,6 @@ graph TD
     API --> MobileApp
     Logic --> WebApp
     Logic --> MobileApp
-```
 ```  sequenceDiagram
     participant Agente as 👤 Agente (App)
     participant Cloud as ☁️ Backend (API)
